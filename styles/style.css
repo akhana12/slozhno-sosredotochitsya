@@ -1,5 +1,141 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  background-color: var(--bg-color);
+  background-image: url(../images/cover-image-dark.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--text-color);
+  font-family: var(--font-famaly);
+  font-size: var(--font-size);
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+}
+
+.title-decor {
+  background-color: var(--title-bg-color);
+  color: var(--title-color);
+  font-weight: 700;
+  font-size: var(--font-size);
+}
+
+.header {
+  position: relative;
+  display: grid;
+  grid-auto-rows: 1fr min-content 1fr;
+	min-block-size: 668px;
+	block-size: 100vh;
+  margin-inline: 10px;
+}
+
+.header__title {
+  display: flex;
+	justify-content: flex-start;
+  color: var(--header-title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  font-size: var(--title-font-size);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%; /* 95.7px */
+}
+
+.header__theme-menu {
+	align-self: center;
+}
+
+.header__theme-menu-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  margin-block-start: 5px;
+}
+
+.header__rec_sing {
+  position: absolute;
+  align-self: flex-end;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 138.889% */
+  inset-block-start: 10px;
+	inset-inline-end: 28px;
+}
+
+.header__rec_sing::after {
+  content: '';
+	position: absolute;
+	flex-shrink: 0;
+	border-radius: 50%;
+	box-shadow: 0 0 4px 2px var(--accent-color);
+	background-color: var(--accent-color);
+	inline-size: 9px;
+	block-size: 9px;
+	inset-block: 8px;
+	inset-inline-start: 40px;
+}
+
+.decorated-zone::before {
+	content: '';
+	position: absolute;
+	border-inline-end: 1px solid var(--accent-color);
+	border-block-start: 1px solid var(--accent-color);
+	block-size: 25px;
+	inline-size: 25px;
+	inset-block-start: 10px;
+	inset-inline-end: 0;
+}
+
+.decorated-zone::after {
+	content: '';
+	position: absolute;
+	border-inline-start: 1px solid var(--accent-color);
+	border-block-end: 1px solid var(--accent-color);
+	block-size: 25px;
+	inline-size: 25px;
+	inset-block-end: 10px;
+	inset-inline-start: 0;
+}
+
+.header__text {
+	align-self: center;
+	margin-block-end: 10px;
+	max-inline-size: 364px;
+	inline-size: 100%;
+}
+
+.header__theme-menu-button {
+  border: none;
+  padding-inline: 12px;
+  color: var(--accent-color);
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 23.4px; /* 130% */
+  text-transform: lowercase;
+  background-color: initial;
+  cursor: pointer;
+}
+
+.content__section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-inline: 10px;
+}
+
+.section__title {
+  margin-block-start: 40px;
+  color: var(--accent-color);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px; /* 130% */
+}
+
+.section__paragraph {
+  margin-block-start: 10px;
 }
