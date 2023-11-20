@@ -1,15 +1,15 @@
 .page.theme_light {
-  --bg-color: #FFF1F7;
-  --header-title-color: #FFC2E6;
+  --bg-color: #fff1f7;
+  --header-title-color: #ffc2e6;
   --title-color: #353430;
-  --title-bg-color: #FF8DCB;
+  --title-bg-color: #ff8dcb;
   --sub-title-color: #353430;
-  --accent-color: #FF0070;
+  --accent-color: #ff0070;
   --text-color: #353430;
-  --link-shadow-color:#FF8DCB;
+  --link-shadow-color: #ff8dcb;
   --border-color: #353430;
   --button-color: #353430;
-  --button-hover-color: rgba(50, 49, 45, 0.40);
+  --button-hover-color: rgb(50 49 45 / 0.4);
   background-image: url(../images/cover-image-light.png);
 }
 
@@ -18,18 +18,19 @@
 }
 
 @media (prefers-color-scheme: light) {
+
   :root {
-    --bg-color: #FFF1F7;
-    --header-title-color: #FFC2E6;
+    --bg-color: #fff1f7;
+    --header-title-color: #ffc2e6;
     --title-color: #353430;
-    --title-bg-color: #FF8DCB;
+    --title-bg-color: #ff8dcb;
     --sub-title-color: #353430;
-    --accent-color: #FF0070;
+    --accent-color: #ff0070;
     --text-color: #353430;
-    --link-shadow-color:#FF8DCB;
+    --link-shadow-color: #ff8dcb;
     --border-color: #353430;
     --button-color: #353430;
-    --button-hover-color: rgba(50, 49, 45, 0.40);
+    --button-hover-color: rgb(50 49 45 / 0.4);
   }
 
   .page {
