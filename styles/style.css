@@ -60,7 +60,7 @@
   margin-block-start: 5px;
 }
 
-.header__rec_sing {
+.header__rec-sing {
   position: absolute;
   align-self: flex-end;
   color: var(--accent-color);
@@ -72,7 +72,7 @@
   inset-inline-end: 28px;
 }
 
-.header__rec_sing::after {
+.header__rec-sing::after {
   content: "";
   position: absolute;
   flex-shrink: 0;
@@ -167,6 +167,7 @@
 
 .section__paragraph {
   margin-block-start: 10px;
+  line-height: 23.4px; /* 130% */
 }
 
 .section__content-images {
@@ -226,7 +227,11 @@
   }
 
   .section-margin {
-    margin-block-start: 0;
+    margin-block-start: 60px;
+  }
+
+  .section__content {
+    margin-block-end: 80px;
   }
 
   .header__title {
@@ -244,7 +249,7 @@
     inset-inline-start: 0;
   }
 
-  .header__rec_sing {
+  .header__rec-sing {
     inset-block-start: 20px;
     inset-inline-end: 28px;
   }

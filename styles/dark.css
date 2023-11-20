@@ -13,7 +13,7 @@
   background-image: url(../images/cover-image-dark.png);
 }
 
-.page.theme_dark .header__rec_sing {
+.page.theme_dark .header__rec-sing {
   visibility: visible;
 }
 
