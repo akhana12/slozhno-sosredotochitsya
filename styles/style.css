@@ -13,11 +13,19 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
+.margin {
+  margin-inline: 10px;
+}
+
 .title-decor {
   background-color: var(--title-bg-color);
   color: var(--title-color);
   font-weight: 700;
   font-size: var(--font-size);
+}
+
+.title-margin-block-end {
+  margin-block-end: 20px;
 }
 
 .header {
@@ -26,7 +34,6 @@
   grid-template-rows: 1fr min-content 1fr;
 	min-block-size: 668px;
 	block-size: 100vh;
-  margin-inline: 10px;
 }
 
 .header__title {
@@ -103,9 +110,8 @@
 .header__text {
 	align-self: center;
   justify-self: end;
+  max-inline-size: 364px;
 	margin-block-end: 10px;
-	max-inline-size: 100%;
-	inline-size: 100%;
 }
 
 .header__theme-menu-button {
@@ -140,11 +146,10 @@
 .section__content {
   display: grid;
   gap: 20px;
-  margin-inline: 10px;
+  margin-block-end: 50px;
 }
 
 .section__title {
-  margin-block-start: 50px;
   color: var(--sub-title-color);
   font-size: 18px;
   font-style: normal;
@@ -152,7 +157,7 @@
   line-height: 23.4px; /* 130% */
 }
 
-.section__title-margin {
+.section-margin {
   margin-block-start: 40px;
 }
 
@@ -164,10 +169,9 @@
   margin-block-start: 10px;
 }
 
-.section__conent-images {
+.section__content-images {
   display: grid;
   gap: 10px;
-  margin-inline: 10px;
 }
 
 .section-images {
@@ -185,8 +189,6 @@
   grid-auto-rows: 1fr min-content 1fr;
   min-block-size: 668px;
   block-size: 100vh;
-  margin-inline: 10px;
-  margin-block-start: 40px;
  }
 
  .footer__title {
@@ -215,8 +217,142 @@
 	outline: 1px solid var(--text-color);
 }
 
+/* Директива для планшета */
+
 @media  (width >= 768px) { 
-  .header__text {
-    inline-size: 50%;
+
+  .margin {
+    margin-inline: 20px;
   }
+
+  .section-margin {
+    margin-block-start: 0;
+  }
+
+  .header__title {
+    margin-inline-start: -20px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) 
+  }
+
+  .decorated-zone::before {
+    inset-block-start: 20px;
+    inset-inline-end: 0px;
+  }
+  
+  .decorated-zone::after {
+    inset-block-end: 20px;
+    inset-inline-start: 0;
+  }
+
+  .header__rec_sing {
+    inset-block-start: 20px;
+    inset-inline-end: 28px;
+  }
+
+  .section-reason {
+    display: grid;
+    grid:  auto-flow / 1fr 2fr;
+    gap: 20px;
+  }
+
+  .section__item-reason {
+    grid-column-start: 2;
+  }
+
+  .section-concentration {
+    display: grid;
+    grid:  auto-flow / repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 20px;
+  }
+
+  .section__item-concentration {
+    grid-column: auto / span 3;
+  }
+
+  .section-advice {
+    display: grid;
+    grid:  auto-flow / 1fr 2fr;
+    gap: 20px;
+  }
+
+  .section__item-advice {
+    grid-column-start: 2;
+  }
+
+  /*Секция с картинками*/
+
+  .section-images {
+    display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas:
+			'sunset sunset ice-cream'
+			'cassette books ice-cream'
+			'cassette street street';
+		gap: 20px;
+  }
+
+  .section-images__image:nth-child(1) {
+    grid-area: sunset;
+  }
+
+  .section-images__image:nth-child(2) {
+    grid-area: ice-cream;
+  }
+
+  .section-images__image:nth-child(3) {
+    grid-area: cassette;
+  }
+
+  .section-images__image:nth-child(4) {
+    grid-area: books;
+  }
+
+  .section-images__image:nth-child(5) {
+    grid-area: street;
+  }
+
+  .section-images__image {
+    		object-fit: cover;
+		inline-size: 100%;
+		block-size: 100%;
+  }
+
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) 
+  }
+
+}
+/*Директива для десктопа*/
+
+@media (width >= 1024px) {
+
+  .header__theme-menu-list {
+		flex-direction: row;
+		justify-content: center;
+    margin-block-start: 0;
+	}
+  
+	.header__theme-menu {
+		align-self: flex-start;
+    margin-block-start: 20px;
+	}
+
+  .header__text {
+    max-inline-size: 491px;
+    margin-block-end: 20px;
+  }
+
+  .section-concentration {
+    display: grid;
+    grid:  auto-flow / repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 20px;
+  }
+
+  .section__item-concentration {
+    grid-row-start: 2;
+    grid-column: span 1;
+  }
+
 }

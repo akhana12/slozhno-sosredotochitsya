@@ -11,5 +11,5 @@
   --button-hover-color: rgba(255, 0, 112, 0.40);
   --font-famaly: 'IBM Plex Mono', sans-serif;
   --font-size: 18px;
-  --title-font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
+  --title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem)
 }
