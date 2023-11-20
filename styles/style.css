@@ -13,7 +13,7 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
-.margin {
+.content-margin {
   margin-inline: 10px;
 }
 
@@ -219,9 +219,9 @@
 
 /* Директива для планшета */
 
-@media (width >= 768px) {
+@media screen and (min-width: 768px) {
 
-  .margin {
+  .content-margin {
     margin-inline: 20px;
   }
 
@@ -296,6 +296,7 @@
     object-fit: cover;
     inline-size: 100%;
     block-size: 100%;
+
   }
 
   .section-images__image:nth-child(1) {
@@ -321,11 +322,11 @@
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
-}
 
+}
 /*Директива для десктопа*/
 
-@media (width >= 1024px) {
+@media screen and (min-width: 1024px) {
 
   .header__theme-menu-list {
     flex-direction: row;
