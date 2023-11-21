@@ -285,6 +285,11 @@
     grid-column-start: 2;
   }
 
+  .section__content-images {
+    display: grid;
+    gap: 20px;
+  }
+
   /*Секция с картинками*/
 
   .section-images {
